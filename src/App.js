@@ -1,23 +1,49 @@
-import logo from './logo.svg';
+import { useState, useEffect} from 'react';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import './App.css';
 
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+
+import Main from "./pages/Main";
+import NoPage from "./pages/NoPage";
+
+import MyPage from "./Owner/MyPage";
+import PetInfo from "./Owner/PetInfo";
+import PetList from "./Owner/PetList";
+
+import Edit from "./Vet/Edit";
+
+import ScrollToTop from "./components/ScrollToTop";
+
+
 function App() {
+  const [currentAccount, setCurrentAccount] = useState('');
+
+  // useEffect(() => {
+  // }, [currentAccount])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <BrowserRouter>
+        <ScrollToTop/>
+        <TransitionGroup>
+          
+          <CSSTransition timeout={300} classNames="fade">
+         
+          <Routes>
+            {/* <Route exact path = "/" element={<Main />} /> */}
+            <Route path="/mypage" element={<MyPage />} />
+            <Route path='/info' element={<PetInfo />} />
+            
+            <Route path="/list" element={<PetList />} />
+            <Route path="/edit" element={<Edit />} />
+            <Route path="/*" element={<NoPage />} />
+          </Routes>
+          </CSSTransition>
+        </TransitionGroup>
+      </BrowserRouter>
     </div>
   );
 }
