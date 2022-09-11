@@ -33,7 +33,7 @@ function App() {
           <CSSTransition timeout={300} classNames="fade">
          
           <Routes>
-            {/* <Route exact path = "/" element={<Main />} /> */}
+            <Route exact path = "/" element={<Main />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path='/info' element={<PetInfo />} />
             
