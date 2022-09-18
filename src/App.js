@@ -15,8 +15,8 @@ import PetInfo from "./Owner/PetInfo";
 import PetList from "./Owner/PetList";
 
 import Edit from "./Vet/Edit";
-import VetPetList from "./Vet/VetPetList";
-import VetPetInfo from "./vet/VetPetInfo";
+import VetList from "./Vet/VetList";
+import VetInfo from "./Vet/VetInfo";
 
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -41,8 +41,8 @@ function App() {
             
             <Route path="/list" element={<PetList />} />
             <Route path="/edit" element={<Edit />} />
-            <Route path="/vetList" element={<VetPetList />} />
-            <Route path="/vetinfo" element={<VetPetInfo />} />
+            <Route path="/vetList" element={<VetList />} />
+            <Route path="/vetinfo" element={<VetInfo />} />
             <Route path="/*" element={<NoPage />} />
           </Routes>
           </CSSTransition>

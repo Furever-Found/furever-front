@@ -1,20 +1,23 @@
-import './VetPetInfo.css';
+import './VetInfo.css';
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker, faMapPin, faMapMarkerAlt, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { Router, Route, Switch, Link } from 'react-router-dom';
 
 
-const VetPetInfo = () => {
-
+const VetInfo = () => {
+    const handleClcik = (e) => {
+        window.location.href = "./edit"
+      };
 
 
     return (
         <body>
             <div class="pet-info">
                 <div class="info-header header">
-                    <div class="last-updated">
-                        <span>Last Updated:</span> September 1, 2020
+                    <div class="update-info">
+                        <button type="button" class="updateBtn" onClick={handleClcik}>Update Info</button>
                     </div>
 
                     <div class="location">
@@ -173,4 +176,4 @@ const VetPetInfo = () => {
         </body>
     )
 };
-export default VetPetInfo;
+export default VetInfo;

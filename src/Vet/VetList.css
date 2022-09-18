@@ -1,0 +1,25 @@
+.vetlist-header{
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 50px 30px 30px;
+    
+}
+
+#vet-img {
+    margin-left: 15px;
+}
+
+.vetlist-heading{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    /* identical to box height, or 67% */
+
+    text-align: center;
+    letter-spacing: -0.24px;
+
+    color: #000000;
+
+    margin-bottom: 40px;
+}

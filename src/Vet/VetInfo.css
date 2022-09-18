@@ -1,0 +1,23 @@
+.update-info > button {
+    background: #E57025;
+    border-radius: 18px;   
+    width: 161px;
+    height: 45px;    
+    border: none;
+
+    /* Font */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.info-header{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 50px 30px 30px;
+}
