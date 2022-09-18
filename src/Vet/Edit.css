@@ -1,0 +1,71 @@
+.edit-save > button {
+    background: #E57025;
+    border-radius: 18px;   
+    width: 161px;
+    height: 45px;    
+    border: none;
+
+    /* Font */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.edit-header{
+    display: flex;
+    justify-content: space-between;
+
+    margin: 50px 30px 30px;
+}
+
+.info-input {
+    margin-left: 5px;
+    width: auto;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: left;
+
+    color: #949494;
+    
+}
+
+.owner-address > textarea{
+    width: 217px;
+    height: 85px;
+    
+}
+
+.add-icon{
+    color: #E57025;
+}
+
+.pet-vaccine-header{
+    display: flex;
+    flex-direction: row;
+}
+
+.pet-vaccine-header > pet-info-h1{
+    align-self: start;
+}
+.add-vaccination{
+    margin-left: 50px;
+    
+    width: 150px;
+
+}
+.add-vaccine-btn{
+    display: flex;
+    flex-direction: row;
+    color: #E57025;
+}
+
+.add-vaccination > button{
+    background-color: none;
+}

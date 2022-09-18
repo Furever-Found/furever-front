@@ -1,26 +1,59 @@
 import './Edit.css';
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarker, faMapPin, faMapMarkerAlt, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarker, faMapPin, faMapMarkerAlt, faCheck, faSquarePlus } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 
 const Edit = () => {
+    const [petInfo, setPetInfo] = useState({
+        breed : "",
+        weight : "",
+        sex: "",
+        age : "",
+        color : null
+    })
+
+    const onPetInfoChange = (e) => setPetInfo(prevInfo => ({ ...prevInfo, [e.target.name]: e.target.value }) )
 
 
+    const [ownerInfo, setOwnerInfo] = useState({
+        ownerName: "",
+        ownerAddress: ""
+    })
+    const onOwnerInfoChange = (e) => setOwnerInfo(prevInfo => ({ ...prevInfo, [e.target.name]: e.target.value }) )
 
+
+    const [vetInfo, setVetInfo] = useState({
+        vetClinic: "",
+        vetName: "",
+        vetNumber: ""
+    })
+    const onVetInfoChange = (e) => setVetInfo(prevInfo => ({ ...prevInfo, [e.target.name]: e.target.value }) )
+
+    const [vaccine, setVaccine] = useState([{
+        name: "",
+        date: ""
+    }])
+
+    const onVaccineChange = (index, target) => e => {
+        let newArr = [...vaccine];
+        newArr[index][target] = e.target.value;
+        setVaccine(newArr);
+    }
     return (
         <body>
-            <div class="pet-info">
-                <div class="info-header header">
-                    <div class="last-updated">
-                        <span>Last Updated:</span> September 1, 2020
+            
+            <div class="pet-info-edit">
+                <div class="edit-header header">
+                    <div class="edit-save">
+                        <button type="button" class="saveBtn">Save</button>
                     </div>
 
                     <div class="location">
                         <FontAwesomeIcon icon={faMapMarkerAlt} size='1.5x' class='location-icon'/> 
-                         San Jose, California, USA
-                        <img id="user-img" src={require('../Assets/user-img.png')} alt="user-img" class='user-profile-img' />
+                            Santa Clara, California, USA
+                        <img id="vet-img" src={require('../Assets/vet-img.png')} alt="vet-img" class='vet-profile-img' />
                     </div>
                 </div>
                 <div class="pet-info-name">
@@ -36,19 +69,28 @@ const Edit = () => {
                                 <span>Species:</span> Dog
                             </div>
                             <div>
-                                <span>Breed:</span> Maltese mix 
+                                <span>Breed:</span> 
+                                <input class="pet-info-input info-input" type="text" name="breed" placeholder="ex) Maltese Mix" onChange={onPetInfoChange} />
                             </div>
                             <div>
-                                <span>Weight:</span> 19.7 lbs 
+                                <span>Weight:</span>
+                                <input class="pet-info-input info-input" type="text" name="weight" placeholder="ex) 19.7 lbs " onChange={onPetInfoChange} />
+
                             </div>
                             <div>
-                                <span>Sex:</span> Male 
+                                <span>Sex:</span>  
+                                <input class="pet-info-input info-input" type="text" name="sex" placeholder="ex) Male" onChange={onPetInfoChange} />
+
                             </div>
                             <div>
-                                <span>Age:</span> 10 years, 2 months 
+                                <span>Age:</span> 
+                                <input class="pet-info-input info-input" type="text" name="age" placeholder="ex) 10 years, 2 months  " onChange={onPetInfoChange} />
+
                             </div>
                             <div>
-                                <span>Color:</span> White 
+                                <span>Color:</span>  
+                                <input class="pet-info-input info-input" type="text" name="color" placeholder="ex) White " onChange={onPetInfoChange} />
+
                             </div>
                             <div>
                                 <span>Microchipped On:</span> July 1st, 2013 
@@ -61,15 +103,19 @@ const Edit = () => {
                             <h1 class="pet-info-h1">OWNER INFORMATION</h1>
                             <div class="pet-owner-detail">
                                 <div class="owner-name">
-                                    <span>Owner:</span> Ysabel Chen
+                                    <span>Owner:</span> 
+                                    <input class="owner-info-input info-input" type="text" name="ownerName" placeholder="ex) Ysabel Chen " onChange={onOwnerInfoChange} />
+
                                 </div>
                                 <div class="owner-address">
                                     <FontAwesomeIcon icon={faMapMarkerAlt} size='1.5x' class='address-icon'/>
-                                    <div class="address-detail">
-                                        1234 Example St. <br/>
-                                        San Jose, California, 98765 <br/>
-                                        USA    
-                                    </div> 
+                                    
+                                    <textarea class="owner-info-input info-input" type="text" name="ownerAddress" 
+                                    placeholder="ex) 1234 Example St.
+                                    San Jose, California, 98765 
+                                    USA  " 
+                                    onChange={onOwnerInfoChange} />
+
 
                                 </div>
                             </div>
@@ -78,20 +124,35 @@ const Edit = () => {
                             <h1 class="pet-info-h1">VETERINARIAN INFORMATION</h1>
                             <div class="pet-vet-detail">
                                 <div class='vet-clinic'>
-                                    <span>Veterinary Clinic: </span> SJ Veterinary Clinic
+                                    <span>Veterinary Clinic: </span> 
+                                    <input class="vet-info-input info-input" type="text" name="vetClinic" placeholder="ex) SJ Veterinary Clinic " onChange={onVetInfoChange} />
+
                                 </div>
                                 <div class='vet-info'>
                                     <span>Veterinarian: </span> 
                                     <div class="vet-name">
-                                        Dr.Log Doggs <br />
-                                        FED ID: 12345678
+                                        <input class="vet-info-input info-input" type="text" name="vetName" placeholder="ex) Dr.Log Doggs " onChange={onVetInfoChange} />
+                                        <br/>
+                                        <input class="vet-info-input info-input" type="text" name="vetNumber" placeholder="ex) FED ID: 12345678 " onChange={onVetInfoChange} />
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="pet-vaccinations">
-                        <h1 class="pet-info-h1">VACCINATIONS</h1>
+                        <div class="pet-vaccine-header">
+                            <h1 class="pet-info-h1">VACCINATIONS</h1>
+                            <div class="add-vaccination">
+                                <button class='add-vaccine-btn' onClick={() => setVaccine([...vaccine, {
+                                    name: "",
+                                    date: ""
+                                }])}>
+                                    <FontAwesomeIcon icon={faSquarePlus} size='1.5x' class='add-icon'></FontAwesomeIcon> 
+                                    Add vaccination
+                                </button>
+                            </div>
+                        </div>
                         <div class="vaccination-table">
                             <div class="vaccination-list">
                                 <div class="vaccination-name">
@@ -170,6 +231,7 @@ const Edit = () => {
                 </div>
                 <div class=""></div>
             </div>
+            
         </body>
     )
 };
