@@ -32,14 +32,25 @@ const Edit = () => {
     const onVetInfoChange = (e) => setVetInfo(prevInfo => ({ ...prevInfo, [e.target.name]: e.target.value }) )
 
     const [vaccine, setVaccine] = useState([{
-        name: "",
-        date: ""
+        vaccineName: "",
+        vaccineDate: ""
     }])
 
     const onVaccineChange = (index, target) => e => {
         let newArr = [...vaccine];
         newArr[index][target] = e.target.value;
         setVaccine(newArr);
+    }
+
+    const [vetNote, setVetNote] = useState({
+        note: "",
+        noteDate: ""
+    })
+
+    const onVetNoteChange = (index, target) => e => {
+        let newArr = [...vetNote];
+        newArr[index][target] = e.target.value;
+        setVetNote(newArr);
     }
     return (
         <body>
@@ -144,13 +155,7 @@ const Edit = () => {
                         <div class="pet-vaccine-header">
                             <h1 class="pet-info-h1">VACCINATIONS</h1>
                             <div class="add-vaccination">
-                                <button class='add-vaccine-btn' onClick={() => setVaccine([...vaccine, {
-                                    name: "",
-                                    date: ""
-                                }])}>
-                                    <FontAwesomeIcon icon={faSquarePlus} size='1.5x' class='add-icon'></FontAwesomeIcon> 
-                                    Add vaccination
-                                </button>
+                                <img id="add-vaccine" src={require('../Assets/add-vaccine.png')} alt="add-vaccine" class='add-vaccine-img' />
                             </div>
                         </div>
                         <div class="vaccination-table">
@@ -218,7 +223,18 @@ const Edit = () => {
                         </div>
                     </div>
                     <div class="pet-veterinarian">
-                        <div class="pet-info-h1">VETERINARIAN NOTES</div>
+                        <div class="vet-note-header">
+                            <div class="pet-info-h1">VETERINARIAN NOTES</div>
+                            <img id="add-note" src={require('../Assets/add-note.png')} alt="add-note" class='add-note-img' />
+                        </div>
+                        <div class="add-vet-note">
+                            <textarea class="vet-note-input info-input" type="text" name="note" 
+                                    placeholder="Type note..." 
+                                    onChange={onVetNoteChange} />
+                            
+                            <button type="button" class="addNoteBtn">Add note</button>
+
+                        </div>
                         <div class="vet-note">
                             <div class="note-date">
                                 September 1, 2020

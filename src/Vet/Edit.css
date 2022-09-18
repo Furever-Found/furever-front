@@ -54,18 +54,63 @@
 .pet-vaccine-header > pet-info-h1{
     align-self: start;
 }
-.add-vaccination{
-    margin-left: 50px;
-    
-    width: 150px;
+
+#add-vaccine{
+    position: absolute;
+    width: 144px;
+    height: 20px;
+    left: 1050px;
+    top: 595px;
 
 }
-.add-vaccine-btn{
+
+#add-note{
+    width: 94px;
+    height: 20px;   
+    position: absolute;
+    left: 1110px;
+    top: 1065px;
+}
+
+.add-vet-note{
     display: flex;
-    flex-direction: row;
-    color: #E57025;
+    flex-direction: column;
+    
+    width: 745px;
+    height: auto;
+
+    margin-bottom: 30px;
 }
 
-.add-vaccination > button{
-    background-color: none;
+
+
+.add-vet-note > textarea{
+    height: 300px;
+    border: 1px solid #626262;
+    border-radius: 12px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.addNoteBtn {
+    width: 113px;
+    height: 38px;   
+    background: #E57025;
+    border-radius: 18px;  
+    border: none;
+    float: right;
+    margin-top: 11px;
+    /* Font */  
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-align: center;
+    align-items: center;
+
+    color: #FFFFFF;
+
+    
+
 }

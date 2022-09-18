@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker, faMapPin, faMapMarkerAlt, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { Link } from 'react-router-dom';
 
 
 const PetInfo = () => {
@@ -16,15 +17,16 @@ const PetInfo = () => {
                     <div class="last-updated">
                         <span>Last Updated:</span> September 1, 2020
                     </div>
-
+                    <Link to="/mypage">
                     <div class="location">
                         <FontAwesomeIcon icon={faMapMarkerAlt} size='1.5x' class='location-icon'/> 
                          San Jose, California, USA
                         <img id="user-img" src={require('../Assets/user-img.png')} alt="user-img" class='user-profile-img' />
                     </div>
+                    </Link>
                 </div>
                 <div class="pet-info-name">
-                    <h1>BLAZEY</h1>
+                    <h1>CHARLIE</h1>
                 </div>
                 <div class="pet-info-detail">
                     <div class="pet-info-head">

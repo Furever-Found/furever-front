@@ -1,0 +1,11 @@
+.main-header{
+    margin-top: 150px;
+}
+.page-map{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 75px;
+
+}
+

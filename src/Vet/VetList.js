@@ -20,7 +20,7 @@ const VetList = () => {
             </div>
             <div class="vetlist-body">
                 <div class="vetlist-first-row list-row">
-                    <Link to="/info">
+                    <Link to="/vetInfo">
                         <div class="list-box box1 col-xs-6 col-sm-4">
                             <span>
                                 <img id="list-box-pet" src={require('../Assets/charlie.png')} alt="pet-img" class='list-box-img' />
@@ -30,7 +30,7 @@ const VetList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/info">
+                    <Link to="/vetInfo">
                         <div class="list-box box2 col-xs-6 col-sm-4">
                             <span>
                                 <img id="list-box-pet" src={require('../Assets/charlie.png')} alt="pet-img" class='list-box-img' />
@@ -40,7 +40,7 @@ const VetList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/info">
+                    <Link to="/vetInfo">
                         <div class="list-box box3 col-xs-6 col-sm-4">
                             <span>
                                 <img id="list-box-pet" src={require('../Assets/max.png')} alt="pet-img" class='list-box-img' />
@@ -50,7 +50,7 @@ const VetList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/info">
+                    <Link to="/vetInfo">
                         <div class="list-box box4 col-xs-6 col-sm-4">
                             <span>
                                 <img id="list-box-pet" src={require('../Assets/buddy.png')} alt="pet-img" class='list-box-img' />
@@ -60,7 +60,7 @@ const VetList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/info">
+                    <Link to="/vetInfo">
                         <div class="list-box box5 col-xs-6 col-sm-4">
                             <span>
                                 <img id="list-box-pet" src={require('../Assets/archie.png')} alt="pet-img" class='list-box-img' />
@@ -70,7 +70,7 @@ const VetList = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/info">
+                    <Link to="/vetInfo">
                         <div class="list-box box6 col-xs-6 col-sm-4">
                             <span>
                                 <img id="list-box-pet list-img-blazey" src={require('../Assets/blazey.png')} alt="pet-img" class='list-box-img' />
