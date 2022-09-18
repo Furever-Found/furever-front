@@ -1,27 +1,25 @@
-import './PetList.css';
+import './VetPetList.css';
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker, faMapPin, faMapMarkerAlt, faCheck } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+const VetPetList = () => {
 
-const PetList = () => {
     return (
         <body>
-            <div class="list-header header">
+            <div class="vetlist-header header">
                 <div class="location">
                     <FontAwesomeIcon icon={faMapMarkerAlt} size='1.5x' class='location-icon'/> 
-                        San Jose, California, USA
-                    <img id="user-img" src={require('../Assets/user-img.png')} alt="user-img" class='user-profile-img' />
+                        Santa Clara, California, USA
+                    <img id="vet-img" src={require('../Assets/vet-img.png')} alt="vet-img" class='vet-profile-img' />
                 </div>
             </div>
-            <div class="list-heading">
+            <div class="vetlist-heading">
                 <h1>San Jose Animal Shelter</h1>
-                <h3>Description of the shelter</h3>
-                <h2>Animals Available for Adoption</h2>
             </div>
-            <div class="list-body">
-                <div class="list-first-row list-row">
+            <div class="vetlist-body">
+                <div class="vetlist-first-row list-row">
                     <Link to="/info">
                         <div class="list-box box1 col-xs-6 col-sm-4">
                             <span>
@@ -83,7 +81,7 @@ const PetList = () => {
                         </div>
                     </Link>
                 </div>
-                <div class="list-second-row list-row">
+                <div class="vetlist-second-row list-row">
                     <Link to="/info">
                         <div class="list-box box1 col-xs-6 col-sm-4">
                             <span>
@@ -145,7 +143,7 @@ const PetList = () => {
                         </div>
                     </Link>
                 </div>
-                <div class="list-third-row list-row">
+                <div class="vetlist-third-row list-row">
                     <Link to="/info">
                         <div class="list-box box1 col-xs-6 col-sm-4">
                             <span>
@@ -211,4 +209,4 @@ const PetList = () => {
         </body>
     )
 };
-export default PetList;
+export default VetPetList;

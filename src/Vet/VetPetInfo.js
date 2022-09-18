@@ -1,11 +1,11 @@
-import './PetInfo.css';
+import './VetPetInfo.css';
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarker, faMapPin, faMapMarkerAlt, faCheck } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 
-const PetInfo = () => {
+const VetPetInfo = () => {
 
 
 
@@ -173,4 +173,4 @@ const PetInfo = () => {
         </body>
     )
 };
-export default PetInfo;
+export default VetPetInfo;

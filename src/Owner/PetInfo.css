@@ -18,13 +18,11 @@
 
 .last-updated > span{
     font-weight: 700;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .location{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 22px;
     line-height: 26px;
     /* identical to box height */
@@ -34,13 +32,18 @@
     flex-direction: row;
     align-items: center;
     margin-left: 2px;
+    /* position: absolute;
+    right: 30px; */
+}
+.location-icon{
+    margin-right: 10px;
+    width: 19px;
+}
+#user-img{
+    margin-left: 15px;
 }
 
-.location > i{
-    width: 18px;
-    height: 23px;
-    background: yellow;
-}
+
 
 .pet-info-name{
     margin-top: 90px;
@@ -57,33 +60,46 @@
 
 .pet-info-detail{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 50px 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 50px 5rem;
+    text-align: left;
 }
 
 .pet-info-head {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px 0;
 }
 
 .pet-info-img{
-    position: absolute;
-    width: 215px;
-    height: 254px;
+    /* position: absolute; */
+    
     border-radius: 25px;
+    /* display:flex;
+    flex-direction: column; */
+    /* margin-left: 100px; */
 }
 
 #pet-img{
-    width: 100%;
-    height: 100%;
+
+    width: 215px;
+    height: 254px;
+    border-radius: 25px;
+    /* object-fit: contain; */
 }
 
 .pet-info-list{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 255px;
+    justify-content: space-around;
+    margin-left: -15px;
+
 }
 .pet-info-list > div{
     
@@ -93,7 +109,6 @@
     /* identical to box height */
 
     text-align: center;
-
     color: #949494;
 
 }
@@ -108,6 +123,9 @@
     color: #000000;
 }
 
+span {
+    font-weight: 500;
+}
 
 
 .pet-info-h1{
@@ -117,6 +135,160 @@
     /* identical to box height */
 
     text-align: center;
+    margin-bottom: 15px;
 
     color: #E57025;
+}
+
+.pet-owner-info, .pet-vet-name {
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 50px; */
+}
+
+.pet-owner-detail, .pet-vet-detail{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+
+    color: #949494;
+
+}
+
+.owner-name{
+    display: flex;
+    flex-direction: row;
+}
+
+.owner-name > span{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+    margin-right: 10px;
+}
+.owner-address{
+    display: flex;
+}
+
+.address-icon{
+    width: 16px;
+    margin-right: 18px;
+    margin-top: -20px;
+    color: #E57025;
+}
+
+.address-detail{
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: #1C1C1C;
+}
+
+.vet-clinic, .vet-info{
+    display: flex;
+    flex-direction: row;
+}
+
+.vet-clinic > span, .vet-info > span{
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.pet-vaccinations, .pet-veterinarian{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin: 30px 0;
+}
+
+.vaccination-table{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #626262;
+    border-radius: 12px;
+    width: 745px;
+    height: auto;
+}
+
+.vaccination-list{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    margin: 10px 0;
+    margin-left: 
+}
+
+.vaccination-name{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform:uppercase;
+    justify-content: center;
+    color: #656565;
+    width: 335px;
+
+}
+.vaccination-check{
+    width: 180px;
+    align-items: center;
+}
+
+.check-icon{
+    width: 45px;
+}
+.vaccination-date{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #949494;
+}
+
+.vet-note{
+    display: flex;
+    flex-direction: column;
+    width: 745px;
+    height: 215px;
+    align-items: flex-start;
+}
+
+.note-date{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+
+}
+
+.note-contents{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    
+    color: #949494;
+    margin-left: 20px;   
+    margin-bottom: 15px;
+    margin-top: 10px;
 }
